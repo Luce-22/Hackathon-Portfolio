@@ -48,6 +48,17 @@ header{
 nav{
     position: sticky;
 }
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
 nav a{
     font-size: 1.8rem;
     color: white;
@@ -64,6 +75,9 @@ nav a:active{
 }
 
 @media(max-width:995px){
+    body {
+        padding: 10px;
+    }
     nav{
         position: absolute;
         top: 100%;
@@ -75,6 +89,29 @@ nav a:active{
         padding: 1rem solid;
         background-color: #2b1700;
         border-top: 0.1rem solid rgba(0,0,0,0,1);
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header h1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    header p{
+        text-align: center;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    form input, form textarea {
+        width: 100%;
     }
 
     nav.active{
@@ -329,6 +366,17 @@ span{
     border-left: 3px solid black;
     right: -8;
     animation: cursor 0.6s infinite;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 @keyframes cursor{
